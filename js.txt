@@ -1,0 +1,27 @@
+var contactButtonPush = document.getElementById("contactPush");
+function contactCharge(){
+    fetch("http://www.raydelto.org/agenda.php").then(function(contacts){
+        return contacts.json();
+    }).then(function(contacts){
+        var list = document.getElementById("contactList");
+        for(var i in contacts){
+            var li = document.createElement("li");
+            li.innerHTML = "<b>NOMBRE:</b> " + contacts[i].nombre + "<br><b>APELLIDO:</b> " 
+            + contacts[i].apellido + "<br><b>TELEFONO:</b> " + contacts[i].telefono + "<br><br>";
+            list.appendChild(li);
+        }
+    })
+}
+
+function contactPush(){
+    var nameValue = document.getElementById("fInput").value;
+    var lastNameValue = document.getElementById("sInput").value;
+    var cellValue = document.getElementById("tInput").value;
+
+    var contact = {nombre: nameValue, apellido: lastNameValue, telefono: cellValue};
+    fetch("http://www.raydelto.org/agenda.php",{
+        method: "POST",
+        body: JSON.stringify(contact)
+        }
+    )
+}

@@ -1,0 +1,31 @@
+.form{
+    background-color: blue;
+    border-radius: 10px;
+    width: 90%;
+    height: 50px;
+    text-align: left;
+}
+
+.fInput, .sInput, .tInput{
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    height: 20px;
+}
+
+.fl, .sl, .tl{
+    font-family: 'Arial', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.bContact{
+    border-radius: 5px;
+    background-color: red;
+    border: none;
+    height: 20px;
+}
+
+.contactList{
+    background-color: black;
+    border-radius: 5px;
+}

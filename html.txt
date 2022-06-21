@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Agenda Multicapas</title>
+</head>
+<body onload="contactCharge()">
+    <div class="body">
+        <div class="form">
+            <label for="fInput" class="fl">Nombre:</label>
+            <input type="text" placeholder="Nombre" class="fInput" id="fInput" name="fInput">
+            
+            <label for="sInput" class="sl">Apellido:</label>
+            <input type="text" placeholder="Apellido" class="sInput" id="sInput" name="sInput">
+
+            <label for="tInput" class="tl">Telefono:</label>
+            <input type="text" placeholder="Telefono" class="tInput" id="tInput" name="tInput">
+            <button onclick="contactPush()" class="bContact">AGREGAR DATOS</button>
+        </div>
+        <ul class="contactList" id="contactList">
+        </ul>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
